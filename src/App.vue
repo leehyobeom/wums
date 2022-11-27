@@ -1,6 +1,5 @@
 
 <template>
-  {{"test"}}
   <Coordinate 
     brand="naver"
     ip= "10.10.10.9797"
