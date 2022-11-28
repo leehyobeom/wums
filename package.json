@@ -1,7 +1,7 @@
 {
   "name": "wums",
   "private": false,
-  "version": "0.0.22",
+  "version": "0.0.25",
   "type": "module",
   "files": [
     "dist"
@@ -24,6 +24,7 @@
     "@vue/apollo-option": "^4.0.0-alpha.20",
     "graphql": "^15.8.0",
     "graphql-tag": "^2.12.6",
+    "moment": "^2.29.4",
     "vite-plugin-dts": "^1.7.1",
     "vue": "^3.2.41"
   },
