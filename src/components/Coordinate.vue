@@ -1,5 +1,4 @@
 <template>
-  {{"gogogogogogo"}}
 </template>
 <script lang='ts'>
 import { defineComponent } from 'vue'
@@ -23,34 +22,34 @@ export default defineComponent({
     }
   },
   created (){
-    // window.addEventListener('beforeunload', this.setMouseCoordinate);
-    // document.addEventListener("mousemove", (event) => {
-    //   this.currnetCoordinate = {
-    //       x: Math.floor(event.clientX / window.innerWidth * 100),
-    //       y: Math.floor(event.clientY / window.innerHeight * 100)
-    //   }
-    // });
-    // this.intervalId = window.setInterval(()=>{
-    //   this.coordinate.push(this.currnetCoordinate);
-    // },10);
+    window.addEventListener('beforeunload', this.setMouseCoordinate);
+    document.addEventListener("mousemove", (event) => {
+      this.currnetCoordinate = {
+          x: Math.floor(event.clientX / window.innerWidth * 100),
+          y: Math.floor(event.clientY / window.innerHeight * 100)
+      }
+    });
+    this.intervalId = window.setInterval(()=>{
+      this.coordinate.push(this.currnetCoordinate);
+    },10);
   },
   methods: {
-        // async setMouseCoordinate() {
-        //   await this.$apollo.mutate({
-        //     mutation: gql`mutation create($cursorMonitor: [CursorMonitor!]!) {
-        //       create(cursorMonitor: $cursorMonitor)
-        //     }`,
-        //     variables: {
-        //         cursorMonitor: {
-        //           brand: this.brand,
-        //           ip: this.ip,
-        //           date: this.date,
-        //           coordinate: this.coordinate
-        //     },
-        //   }
-        //   })
-        //   window.clearInterval(this.intervalId);
-        // }
+        async setMouseCoordinate() {
+          await this.$apollo.mutate({
+            mutation: gql`mutation create($cursorMonitor: [CursorMonitor!]!) {
+              create(cursorMonitor: $cursorMonitor)
+            }`,
+            variables: {
+                cursorMonitor: {
+                  brand: this.brand,
+                  ip: this.ip,
+                  date: this.date,
+                  coordinate: this.coordinate
+            },
+          }
+          })
+          window.clearInterval(this.intervalId);
+        }
     }
 })
 </script>

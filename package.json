@@ -1,14 +1,14 @@
 {
   "name": "wums",
   "private": false,
-  "version": "0.0.15",
+  "version": "0.0.22",
   "type": "module",
   "files": [
     "dist"
   ],
   "main": "./dist/coordinate.umd.js",
   "module": "./dist/coordinate.js",
-  "types": "./dist/App.vue.d.ts",
+  "types": "./dist/main.d.ts",
   "exports": {
     ".": {
       "import": "./dist/coordinate.js"

@@ -3,6 +3,8 @@ import './style.css'
 import App from './App.vue'
 import { ApolloClient, InMemoryCache } from '@apollo/client/core'
 import { createApolloProvider } from '@vue/apollo-option'
+import Coordinate from './components/Coordinate.vue'
+export default Coordinate
 const cache = new InMemoryCache()
 
 const apolloClient = new ApolloClient({
