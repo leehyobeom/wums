@@ -9,7 +9,8 @@ const cache = new InMemoryCache()
 
 const apolloClient = new ApolloClient({
   cache,
-  uri: 'http://localhost:30002/graphql',
+  uri: 'http://gql.wums.link',
+  // uri: 'http://localhost:30002/graphql',
 })
 const apolloProvider = createApolloProvider({
   defaultClient: apolloClient,
